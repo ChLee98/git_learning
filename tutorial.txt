@@ -47,3 +47,8 @@
 11.push an existing repository from the command line
 	git remote add origin xxx(this info can be got in Down... in repository.)
 	git push -u origin master
+
+12.if you want to delete a file
+	git rm --cached -r useless_file_name
+	git commit -m "remove directory from remote repository"
+	git push
