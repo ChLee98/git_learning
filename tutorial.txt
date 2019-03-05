@@ -1,0 +1,49 @@
+1.install git
+	sudo apt-get update  
+	sudo apt-get install git
+
+2.config your github (you must sign up your github account.)
+	git config --global user.name "Your Name" 
+	git config --global user.email "youremail@domain.com"
+	#you only config your github once
+3.show your config info
+	git config --list
+
+
+4.edit your config info 
+	gedit  ~/.gitconfig
+	#if you have problem on your config and have to change it, you can edit this flie.
+
+5.create SSH key
+	ssh-keygen -C 'you email address@gmail.com' -t rsa
+
+6.show you SSH key
+	cat ~/.ssh/id_rsa.pub
+
+7.next operations on your github
+	(1)sign in your github account
+	(2)click "Settings"
+	(3)Setting——>SSH and GPG keys——>New SSH key——>title(you can rename any titile)
+	——>ssh(copy information in terminal after cat ~/.ssh/id_rsa.pub)
+
+8.verify if contract github
+	ssh -T git@github.com
+	#if show this info, the contract is sucessful.
+	#Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.
+
+9.mkdir one file in your local Pc
+	mkdir git_learning
+	cd git_learing
+	git init
+	touch README.md
+	touch your files
+	git add *
+	git commit -m "annotation_info"
+
+
+10.next operations on your github
+	new repository——>repository name (note:this name must is consistent to the name of git in your local pc)——>description——>create repository
+
+11.push an existing repository from the command line
+	git remote add origin xxx(this info can be got in Down... in repository.)
+	git push -u origin master
