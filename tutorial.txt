@@ -15,7 +15,7 @@
 	#if you have problem on your config and have to change it, you can edit this flie.
 
 5.create SSH key
-	ssh-keygen -C 'you email address@gmail.com' -t rsa
+	ssh-keygen -C 'you email' -t rsa
 
 6.show you SSH key
 	cat ~/.ssh/id_rsa.pub
@@ -28,6 +28,10 @@
 
 8.verify if contract github
 	ssh -T git@github.com
+	#The authenticity of host 'github.com ' can't be established.
+	#RSA key fingerprint is　xxxx
+	#Are you sure you want to continue connecting (yes/no)? yes
+	#Warning: Permanently added 'xxx' (RSA) to the list of known hosts.
 	#if show this info, the contract is sucessful.
 	#Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.
 
