@@ -5,14 +5,14 @@
 2.config your github (you must sign up your github account.)
 	git config --global user.name "Your Name" 
 	git config --global user.email "youremail@domain.com"
-	#you only config your github once
+	# you only config your github once
 3.show your config info
 	git config --list
 
 
 4.edit your config info 
 	gedit  ~/.gitconfig
-	#if you have problem on your config and have to change it, you can edit this flie.
+	# if you have problem on your config and have to change it, you can edit this flie.
 
 5.create SSH key
 	ssh-keygen -C 'you email' -t rsa
@@ -28,30 +28,37 @@
 
 8.verify if contract github
 	ssh -T git@github.com
-	#The authenticity of host 'github.com ' can't be established.
-	#RSA key fingerprint is　xxxx
-	#Are you sure you want to continue connecting (yes/no)? yes
-	#Warning: Permanently added 'xxx' (RSA) to the list of known hosts.
-	#if show this info, the contract is sucessful.
-	#Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.
+	# The authenticity of host 'github.com ' can't be established.
+	# RSA key fingerprint is　xxxx
+	# Are you sure you want to continue connecting (yes/no)? yes
+	# Warning: Permanently added 'xxx' (RSA) to the list of known hosts.
+	# if show this info, the contract is sucessful.
+	# Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.
 
 9.mkdir one file in your local Pc
 	mkdir git_learning
 	cd git_learing
 	git init
-	touch README.md
+	# you can delete .git to delete git information completely
+	touch README.md # notation
 	touch your files
 	git add *
 	git commit -m "annotation_info"
+	# eg:git commit -m "smart_city_submit"
 
 
 10.next operations on your github
 	new repository——>repository name (note:this name must is consistent to the name of git in your local pc)——>description——>create repository
 
 11.push an existing repository from the command line
-	git remote add origin xxx(this info can be got in Down... in repository.)
+	# cd fildfolder you want to push
+	git remote add origin ssh_id(this info can be got from "clone and Download" in your repository)
+	# git push -u origin master
+	# note: if your create README.md when you created repository, your fildfolder should have README.md, you can first pull the resposity on github
+	# if your respoinsity on github doesn't have README.md, you push it directly and don't pull operation.
+	git pull --rebase origin master
+	# the push it
 	git push -u origin master
-
 12.if you want to delete a file
 	git rm --cached -r useless_file_name
 	git commit -m "remove directory from remote repository"
