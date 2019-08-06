@@ -54,11 +54,19 @@
 	# cd fildfolder you want to push
 	git remote add origin ssh_id(this info can be got from "clone and Download" in your repository)
 	# git push -u origin master
-	# note: if your create README.md when you created repository, your fildfolder should have README.md, you can first pull the resposity on github
-	# if your respoinsity on github doesn't have README.md, you push it directly and don't pull operation.
-	git pull --rebase origin master
-	# the push it
-	git push -u origin master
+	# scene1: if your create README.md when you created repository, your fildfolder should have README.md, you can 
+	
+		# method_1: first pull the resposity on github --remote overlay local
+		git pull --rebase origin master
+		# then push it
+		git push -u origin master
+
+		# methos_2: --local overlay remote
+		git push -f origin master
+		
+	# scene2: if your respoinsity on github doesn't have README.md, you push it directly and don't pull operation.
+		git push -u origin master	
+
 12.if you want to delete a file
 	git rm --cached -r useless_file_name
 	git commit -m "remove directory from remote repository"
