@@ -63,3 +63,7 @@
 	git rm --cached -r useless_file_name
 	git commit -m "remove directory from remote repository"
 	git push
+13.if you change file and want to push it
+	git add filename
+	git commit -m "xxx"
+	git push origin master # or other branch
